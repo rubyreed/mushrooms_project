@@ -3,9 +3,9 @@
 one:
   variety: MyString
   color: MyString
-  use: MyString
+  usage: MyString
 
 two:
   variety: MyString
   color: MyString
-  use: MyString
+  usage: MyString

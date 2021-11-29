@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_11_28_205535) do
   create_table "mushrooms", force: :cascade do |t|
     t.string "variety"
     t.string "color"
-    t.string "use"
+    t.string "usage"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
