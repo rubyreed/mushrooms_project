@@ -24,6 +24,7 @@ return(
       <input value = {colorState} onChange = {(e) => setColorState(e.target.value)}/>
       <p>Use:</p>
       <input value = {usageState} onChange = {(e) => setUsageState(e.target.value)}/>
+      <br/>
       <button>Click to Add New mushroom</button>
     </form>
 </div>

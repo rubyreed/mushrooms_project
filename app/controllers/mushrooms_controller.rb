@@ -24,6 +24,14 @@ def destroy
   render json: @mushroom.destroy
 end
 
+def update
+  if (@mushroom.update(mushroom_params))
+    render json: @mushroom
+  else
+    render json: {errors: @mushroom.errors.full_messages}, status: 422
+  end
+end
+
 private
 
 def set_mushroom

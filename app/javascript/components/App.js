@@ -20,6 +20,12 @@ const App = () => {
     setMushroomsArray([newMushroom,...mushroomsArray])
   };
 
+  const updateMushroom = (changedMushroom) => {
+    let updatedMushrooms = mushroomsArray.map((single_mushroom) => (single_mushroom.id === changedMushroom.id ? changedMushroom : single_mushroom));
+  setMushroomsArray(updatedMushrooms)
+  };
+  
+
   const deleteMushroom = async (id) => {
     let response = await axios.delete(`/mushrooms/${id}`);
     let filteredMushrooms = mushroomsArray.filter((single_mushroom) => single_mushroom.id !== id);
@@ -27,12 +33,20 @@ const App = () => {
   };
 
 return (
-<div>
-<h1> App component </h1>
+<div style={styles.container}>
+<h1 style={styles.header}> Mushroom Info App</h1>
 <NewMushroomForm newestMushroom = {displayNewMushroom}/>
-<Mushrooms multiple_mushrooms={mushroomsArray} deleteMushroom={deleteMushroom}/>
+<Mushrooms multiple_mushrooms={mushroomsArray} deleteMushroom={deleteMushroom} updateMushroom={updateMushroom}/>
 </div>
 );
+};
+
+const styles = {
+  container: { border: "2px solid purple", maxWidth: "800px", 
+  margin: "10px", padding: "10px"},
+  header: {
+    color: "blue",
+  },
 };
 
 export default App;
