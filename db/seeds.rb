@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Mushroom.destroy_all
 
-Mushroom.create(variety: "Morchella esculenta(Morel)", color: "Brown", use: "Edible")
-Mushroom.create(variety: "Cortinarius cinnamomeus(Cinnamon Cap)", color: "Red/Brown", use: "Edible")
-Mushroom.create(variety: "Psilocybin(Magic Mushroom)", color: "Light Brown", use: "Psychedelic")
-Mushroom.create(variety: "Hydnellum pecki(Bleeding Tooth Fungus", color: "White and Red", use: "Scaring your neighbor")
-Mushroom.create(variety: "Hericium erinaceus(Lion's Mane", color: "White", use: "Medicinal")
+Mushroom.create(variety: "Morchella esculenta (Morel)", color: "Brown", usage: "Edible")
+Mushroom.create(variety: "Cortinarius cinnamomeus (Cinnamon Cap)", color: "Red/Brown", usage: "Edible")
+Mushroom.create(variety: "Psilocybin (Magic Mushroom)", color: "Light Brown", usage: "Psychedelic")
+Mushroom.create(variety: "Hydnellum pecki (Bleeding Tooth Fungus)", color: "White and Red", usage: "Scaring your neighbor")
+Mushroom.create(variety: "Hericium erinaceus (Lion's Mane)", color: "White", usage: "Medicinal")
