@@ -15,9 +15,9 @@ const handleSubmit = async (e) => {
   newestMushroom(response.data)
 };
 return(
-<div>
-  <h1>New Mushroom Form</h1>
-    <form onSubmit = {handleSubmit}>
+<div style={styles.container}>
+  <h1 style={styles.header}>New Mushroom Form</h1>
+    <form style={styles.form} onSubmit = {handleSubmit}>
       <p>Variety:</p>
       <input value = {varietyState} onChange = {(e) => setVarietyState(e.target.value)}/>
       <p>Color:</p>
@@ -25,10 +25,30 @@ return(
       <p>Use:</p>
       <input value = {usageState} onChange = {(e) => setUsageState(e.target.value)}/>
       <br/>
-      <button>Click to Add New mushroom</button>
+      <button style={styles.button}>Click to Add New Mushroom</button>
     </form>
 </div>
 );
+};
+
+const styles = {
+  container: {
+    border: "3px solid green",
+    margin: "10px",
+    padding: "10px",
+  },
+  header: {
+    color: "green",
+    textAlign:"center"
+  },
+button: {
+  marginTop: "5px",
+  color:"green",
+  backgroundColor:"lightGreen",
+},
+form: {
+textAlign:"center"
+}
 };
 
 export default NewMushroomForm;

@@ -4,8 +4,8 @@ import Mushrooms from './Mushrooms';
 import NewMushroomForm from './NewMushroomForm';
 
 const App = () => {
-
   const [mushroomsArray, setMushroomsArray] = useState([]);
+
 
   useEffect(() => {
     getMushrooms();
@@ -34,7 +34,8 @@ const App = () => {
 
 return (
 <div style={styles.container}>
-<h1 style={styles.header}> Mushroom Info App</h1>
+<h1 style={styles.header}> Local Mushrooms</h1>
+{/* <img src={process.env.PUBLIC_URL + "../../mushroom_image.jpg"} alt="mushrooms"/> */}
 <NewMushroomForm newestMushroom = {displayNewMushroom}/>
 <Mushrooms multiple_mushrooms={mushroomsArray} deleteMushroom={deleteMushroom} updateMushroom={updateMushroom}/>
 </div>
@@ -42,11 +43,18 @@ return (
 };
 
 const styles = {
-  container: { border: "2px solid purple", maxWidth: "800px", 
-  margin: "10px", padding: "10px"},
+  container: { 
+  border: "4px solid purple",  
+  margin: "10px", 
+  padding: "10px",
+  background: `url('${process.env.PUBLIC_URL}../../mushroom_image.jpg')`,
+
+},
   header: {
-    color: "blue",
+    color: "purple",
+    textAlign: "center",
   },
+ 
 };
 
 export default App;
